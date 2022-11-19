@@ -1,0 +1,46 @@
+{
+  "name": "hedgehog",
+  "version": "1.0.0",
+  "description": "A useful JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
+  "type": "module",
+  "scripts": {
+    "test": "node out/index.js",
+    "build": "tsc -p tsconfig.json",
+    "types": " tsc ./source/index.ts --declaration --allowJs --emitDeclarationOnly --outDir ./dist/types",
+    "buildThenGenerateTypes": "npm run build && npm run types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PorkyProductions/hedgehog.js.git"
+  },
+  "keywords": [
+    "hedgehogs"
+  ],
+  "author": "PorkyProductions",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PorkyProductions/deMotivator.js/issues"
+  },
+  "homepage": "https://github.com/PorkyProductions/deMotivator.js#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.3"
+  },
+  "files": [
+    "./dist/**/*.{js, d.ts}",
+    "./dist/types/**/*.d.ts"
+  ],
+  "main": "./dist/index.js",
+  "displayName": "(de)Motivator.js",
+  "contributors": [
+    "Tristan Winata",
+    "Ryan Mullin"
+  ],
+  "maintainers": [
+    "Ryan Mullin",
+    "Tristan Winata"
+  ],
+  "types": "./dist/types/*.d.ts"
+}
