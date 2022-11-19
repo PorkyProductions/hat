@@ -1,0 +1,7 @@
+export default function signedMod(num, modulator){
+    if(num >= 0){
+        return num % modulator;
+    } else {
+        return modulator - (-num % modulator)
+    }
+}
