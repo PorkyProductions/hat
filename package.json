@@ -1,12 +1,12 @@
 {
-  "name": "hedgehog",
+  "name": "hedgehog-array-tools",
   "version": "1.0.0",
   "description": "A useful JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
   "type": "module",
   "scripts": {
     "test": "node out/index.js",
     "build": "tsc -p tsconfig.json",
-    "types": " tsc ./source/index.ts --declaration --allowJs --emitDeclarationOnly --outDir ./dist/types",
+    "types": " tsc ./src/index.ts --declaration --allowJs --emitDeclarationOnly --outDir ./out/types",
     "buildThenGenerateTypes": "npm run build && npm run types"
   },
   "repository": {
@@ -32,7 +32,7 @@
     "./dist/**/*.{js, d.ts}",
     "./dist/types/**/*.d.ts"
   ],
-  "main": "./dist/index.js",
+  "main": "./out/index.js",
   "displayName": "(de)Motivator.js",
   "contributors": [
     "Tristan Winata",
