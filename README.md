@@ -1,2 +1,11 @@
-# hedgehog.js
-A useful JavaScript library with a bunch of helper functions pretaining to hedgehogs and such
+# HAT.js
+
+
+
+**What is HAT?**
+Hat means:
+```
+Hedgehog
+Array
+Tools
+```

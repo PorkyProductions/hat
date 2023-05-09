@@ -1,17 +1,15 @@
 {
-  "name": "hedgehog-array-tools",
+  "name": "@porkyproductions/hat",
   "version": "1.0.0",
-  "description": "A useful JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
+  "description": "A balzingly fast JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
   "type": "module",
   "scripts": {
     "test": "node out/index.js",
-    "build": "tsc -p tsconfig.json",
-    "types": " tsc ./src/index.ts --declaration --allowJs --emitDeclarationOnly --outDir ./out/types",
-    "buildThenGenerateTypes": "npm run build && npm run types"
+    "build": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PorkyProductions/hedgehog.js.git"
+    "url": "git+https://github.com/PorkyProductions/hat.git"
   },
   "keywords": [
     "hedgehogs"
@@ -19,9 +17,9 @@
   "author": "PorkyProductions",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PorkyProductions/deMotivator.js/issues"
+    "url": "https://github.com/PorkyProductions/hat/issues"
   },
-  "homepage": "https://github.com/PorkyProductions/deMotivator.js#readme",
+  "homepage": "https://github.com/PorkyProductions/hat#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
@@ -29,7 +27,7 @@
     "typescript": "^4.9.3"
   },
   "files": [
-    "./dist/**/*.{js, d.ts}",
+    "./dist/**/*.js",
     "./dist/types/**/*.d.ts"
   ],
   "main": "./out/index.js",
@@ -42,5 +40,5 @@
     "Ryan Mullin",
     "Tristan Winata"
   ],
-  "types": "./dist/types/*.d.ts"
+  "types": "./dist/types/index.d.ts"
 }

@@ -1,34 +1,34 @@
 {
-    "compilerOptions": {
-      "allowUnreachableCode": false,
-      "allowUnusedLabels": false,
-      "alwaysStrict": true,
-      "charset": "UTF-8",
-      "diagnostics": true,
-      "moduleResolution": "node",
-      "noErrorTruncation": false,
-      "noImplicitAny": true,
-      "noImplicitReturns": true,
-      "noImplicitThis": true,
-      "outDir": "./out/",
-      "pretty": true,
-      "declaration": false,
-      "removeComments": false,
-      "strict": true,
-      "strictFunctionTypes": true,
-      "target": "es2019", // 3 years ago JavaScript is up to date enough, right???
-      "watch": false
-    },
-      "files": [
-          "./src/index.ts"
-      ],
-      "types": [
-      ],
-      "typeRoots": [
-          "node_modules/@types"
-      ],
-      "lib": [
-          "dom",
-          "es2019"
-      ]
-  }
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": false,
+    "diagnostics": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noErrorTruncation": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "listEmittedFiles": true,
+    "pretty": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "target": "ES2020", // 3 years ago JavaScript is up to date enough, right???
+    "watch": false,
+    "outDir": "./dist/",
+    "declarationDir": "./dist/types/"
+  },
+  "files": ["./src/index.ts"],
+  "types": [],
+  "typeRoots": ["node_modules/@types"],
+  "lib": ["dom", "es2019"]
+}
