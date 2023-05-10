@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A balzingly fast JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
   "type": "module",
+  "private": false,
   "scripts": {
     "test": "node out/index.js",
     "build": "tsc -p tsconfig.json"
