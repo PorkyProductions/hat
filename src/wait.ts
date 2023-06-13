@@ -1,1 +1,1 @@
-export const wait = (seconds: number, callback: () => any = () => {}) => setTimeout(callback, seconds * 1000);
+export const wait = (seconds: number, callback: () => any = () => { void(0); }) => setTimeout(callback, seconds * 1000);

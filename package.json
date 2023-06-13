@@ -6,7 +6,8 @@
   "private": false,
   "scripts": {
     "test": "node out/index.js",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint ./src/* --fix"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,12 @@
   },
   "files": [
     "./dist/**/*.js",
-    "./dist/types/**/*.d.ts"
+    "./dist/sorters/**/*.js",
+    "./dist/types/**/*.d.ts",
+    "./dist/types/sorters/**/*.d.ts"
   ],
-  "main": "./out/index.js",
-  "displayName": "(de)Motivator.js",
+  "main": "./dist/index.js",
+  "displayName": "HAT",
   "contributors": [
     "Tristan Winata",
     "Ryan Mullin"

@@ -1,31 +1,30 @@
 import {randomInRange} from './randomInRange';
 import {signedMod} from './signedMod';
-import {randomInArray} from './randomInArray'
-import {wait} from './wait'
+import {randomInArray} from './randomInArray';
+import {wait} from './wait';
+import * as print from './print';
 
-interface Sorters {}
+export {
+	// fns
+	randomInRange,
+	signedMod,
+	randomInArray,
+	wait,
+	print,
+};
+
 interface HAT {
     randomInRange: (min: number, max: number) => number
 	signedMod: (num: number, modulator: number) => number
 	randomInArray: <T>(array: T[]) => T
 	wait: (seconds: number, callback?: () => any) => void
-	sorters: Sorters
 }
 
 export const hat: HAT = {
-	randomInRange: (min: number, max: number) => {
-		return randomInRange(min, max);
-	},
-	signedMod: (num: number, modulator: number): number => {
-		return signedMod(num, modulator);
-	},
-	randomInArray: <T>(array: T[]): T => {
-		return randomInArray(array);
-	},
-	wait: (seconds: number, callback?: () => any) => {
-		return wait(seconds, callback);
-	},
-	sorters: {}
+	randomInRange: (min: number, max: number) => randomInRange(min, max),
+	signedMod: (num: number, modulator: number): number => signedMod(num, modulator),
+	randomInArray: <T>(array: T[]): T => randomInArray(array),
+	wait: (seconds: number, callback?: () => any) => wait(seconds, callback),
 };
 
 export class Hat implements HAT {
@@ -34,14 +33,13 @@ export class Hat implements HAT {
 	}
 	public signedMod(num: number, modulator: number) {
 		return signedMod(num, modulator);
-	};
+	}
 	public randomInArray<T>(array: T[]): T {
 		return randomInArray(array);
 	}
 	public wait(seconds: number, callback?: () => any) {
 		return wait(seconds, callback);
 	}
-	sorters: Sorters = {};
 }
 
 export default hat;
