@@ -17,14 +17,14 @@ interface HAT {
     randomInRange: (min: number, max: number) => number
 	signedMod: (num: number, modulator: number) => number
 	randomInArray: <T>(array: T[]) => T
-	wait: (seconds: number, callback?: () => any) => void
+	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => void
 }
 
 export const hat: HAT = {
 	randomInRange: (min: number, max: number) => randomInRange(min, max),
 	signedMod: (num: number, modulator: number): number => signedMod(num, modulator),
 	randomInArray: <T>(array: T[]): T => randomInArray(array),
-	wait: (seconds: number, callback?: () => any) => wait(seconds, callback),
+	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => wait(seconds, callback),
 };
 
 export class Hat implements HAT {
@@ -37,7 +37,7 @@ export class Hat implements HAT {
 	public randomInArray<T>(array: T[]): T {
 		return randomInArray(array);
 	}
-	public wait(seconds: number, callback?: () => any) {
+	public wait<TCallback>(seconds: number, callback?: () => TCallback | void) {
 		return wait(seconds, callback);
 	}
 }
