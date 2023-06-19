@@ -1,6 +1,6 @@
 {
   "name": "@porkyproductions/hat",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A balzingly fast JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
   "type": "module",
   "private": false,
@@ -14,7 +14,13 @@
     "url": "git+https://github.com/PorkyProductions/hat.git"
   },
   "keywords": [
-    "hedgehogs"
+    "hedgehogs",
+    "array",
+    "tools",
+    "random",
+    "random in array",
+    "random in range",
+    "print"
   ],
   "author": "PorkyProductions",
   "license": "MIT",
@@ -30,9 +36,9 @@
   },
   "files": [
     "./dist/**/*.js",
-    "./dist/sorters/**/*.js",
-    "./dist/types/**/*.d.ts",
-    "./dist/types/sorters/**/*.d.ts"
+    "./dist/**/*.js.map",
+    "./dist/**/*.d.ts",
+    "./dist/**/*.d.ts.map"
   ],
   "main": "./dist/index.js",
   "displayName": "HAT",
@@ -44,5 +50,5 @@
     "Ryan Mullin",
     "Tristan Winata"
   ],
-  "types": "./dist/types/index.d.ts"
+  "types": "./dist/index.d.ts"
 }
