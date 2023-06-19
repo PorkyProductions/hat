@@ -1,6 +1,6 @@
 {
   "name": "@porkyproductions/hat",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A balzingly fast JavaScript library with a bunch of helper functions pretaining to hedgehogs and such ",
   "type": "module",
   "private": false,
