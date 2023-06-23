@@ -27,6 +27,7 @@ import {randomInRange} from './randomInRange';
 import {signedMod} from './signedMod';
 import {randomInArray} from './randomInArray';
 import {wait} from './wait';
+import {factorial} from './factorial';
 import * as print from './print';
 
 export {
@@ -35,6 +36,7 @@ export {
 	signedMod,
 	randomInArray,
 	wait,
+	factorial,
 	print,
 };
 
@@ -43,6 +45,7 @@ interface HAT {
 	signedMod: (num: number, modulator: number) => number
 	randomInArray: <T>(array: T[]) => T
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => void
+	factorial: (number: number) => number
 }
 
 export const hat: HAT = {
@@ -50,6 +53,7 @@ export const hat: HAT = {
 	signedMod: (num: number, modulator: number): number => signedMod(num, modulator),
 	randomInArray: <T>(array: T[]): T => randomInArray(array),
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => wait(seconds, callback),
+	factorial: (number: number): number => factorial(number),
 };
 
 export class Hat implements HAT {
@@ -64,6 +68,9 @@ export class Hat implements HAT {
 	}
 	public wait<TCallback>(seconds: number, callback?: () => TCallback | void) {
 		return wait(seconds, callback);
+	}
+	public factorial(number: number): number {
+		return factorial(number);
 	}
 }
 
