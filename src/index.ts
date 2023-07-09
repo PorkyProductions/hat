@@ -30,6 +30,7 @@ import {wait} from './wait';
 import {factorial} from './factorial';
 import * as print from './print';
 
+export type { Maybe, MaybeArray } from './types';
 export {
 	// fns
 	randomInRange,
