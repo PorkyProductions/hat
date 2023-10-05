@@ -28,9 +28,13 @@ import {signedMod} from './signedMod';
 import {randomInArray} from './randomInArray';
 import {wait} from './wait';
 import {factorial} from './factorial';
+import { matrixMultiply } from './matrixMultiplication';
 import * as print from './print';
 
-export type { Maybe, MaybeArray } from './types';
+import type { Matrix } from './types';
+export type { Maybe, MaybeArray, Matrix } from './types';
+
+
 export {
 	// fns
 	randomInRange,
@@ -38,6 +42,7 @@ export {
 	randomInArray,
 	wait,
 	factorial,
+	matrixMultiply,
 	print,
 };
 
@@ -47,6 +52,7 @@ interface HAT {
 	randomInArray: <T>(array: T[]) => T
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => void
 	factorial: (number: number) => number
+	matrixMultiply: (matrixA: Matrix, matrixB: Matrix) => Matrix
 }
 
 export const hat: HAT = {
@@ -55,10 +61,15 @@ export const hat: HAT = {
 	randomInArray: <T>(array: T[]): T => randomInArray(array),
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => wait(seconds, callback),
 	factorial: (number: number): number => factorial(number),
+	matrixMultiply: (matrixA: Matrix, matrixB: Matrix): Matrix => matrixMultiply(matrixA, matrixB),
 };
 
 export class Hat implements HAT {
+	private __refresh(): HAT {
+		return new Hat();
+	} 
 	public randomInRange(min: number, max: number) {
+		this.__refresh();
 		return randomInRange(min, max);
 	}
 	public signedMod(num: number, modulator: number) {
@@ -72,6 +83,9 @@ export class Hat implements HAT {
 	}
 	public factorial(number: number): number {
 		return factorial(number);
+	}
+	public matrixMultiply(matrixA: Matrix, matrixB: Matrix): Matrix {
+		return matrixMultiply(matrixA, matrixB);
 	}
 }
 
