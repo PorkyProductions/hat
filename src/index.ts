@@ -29,6 +29,7 @@ import {randomInArray} from './randomInArray';
 import {wait} from './wait';
 import {factorial} from './factorial';
 import { matrixMultiply } from './matrixMultiplication';
+import { emojify, deEmojify, HATString } from './emojify';
 import * as print from './print';
 
 import type { Matrix } from './types';
@@ -43,6 +44,9 @@ export {
 	wait,
 	factorial,
 	matrixMultiply,
+	emojify,
+	deEmojify,
+	HATString,
 	print,
 };
 
@@ -53,6 +57,9 @@ interface HAT {
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => void
 	factorial: (number: number) => number
 	matrixMultiply: (matrixA: Matrix, matrixB: Matrix) => Matrix
+	emojify: (str: string) => string
+	deEmojify: (str: string) => string
+	print: typeof print
 }
 
 export const hat: HAT = {
@@ -62,6 +69,9 @@ export const hat: HAT = {
 	wait: <TCallback>(seconds: number, callback?: () => TCallback | void) => wait(seconds, callback),
 	factorial: (number: number): number => factorial(number),
 	matrixMultiply: (matrixA: Matrix, matrixB: Matrix): Matrix => matrixMultiply(matrixA, matrixB),
+	emojify: (str: string): string => emojify(str),
+	deEmojify: (str: string): string => deEmojify(str),
+	print: print,
 };
 
 export class Hat implements HAT {
@@ -87,6 +97,13 @@ export class Hat implements HAT {
 	public matrixMultiply(matrixA: Matrix, matrixB: Matrix): Matrix {
 		return matrixMultiply(matrixA, matrixB);
 	}
+	public emojify(str: string): string {
+		return emojify(str);
+	}
+	public deEmojify(str: string): string {
+		return deEmojify(str);
+	}
+	public print = print;
 }
 
 export default hat;
