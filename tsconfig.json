@@ -17,7 +17,7 @@
     "pretty": true,
     "declaration": true,
     "declarationMap": true,
-    "removeComments": false,
+    "removeComments": true,
     "strict": true,
     "strictFunctionTypes": true,
     "sourceMap": true,
