@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-import { EmojiDictionary } from "./types";
+import { EmojiDictionary } from './types';
 
 const emojiDict: EmojiDictionary = {
 	a: '🐶',

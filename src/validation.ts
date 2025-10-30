@@ -39,7 +39,7 @@ const isURL = (str: string): boolean => {
 		return urlRegex.test(str);
 	}
 };
-const isNumber = (value: any): boolean => {
+const isNumber = (value: unknown): boolean => {
 	if (value === null || value === undefined) return false;
 	
 	if (typeof value === 'string') {
@@ -50,17 +50,7 @@ const isNumber = (value: any): boolean => {
 	const num = Number(value);
 	return !isNaN(num) && isFinite(num);
 };
-const isDate = (value: any): boolean => {
-	if (value === null || value === undefined) return false;
-	
-	if (value instanceof Date) {
-		return !isNaN(value.getTime());
-	}
-	
-	const date = new Date(value);
-	return !isNaN(date.getTime());
-};
-const isInteger = (value: any): boolean => {
+const isInteger = (value: unknown): boolean => {
 	if (!isNumber(value)) return false;
 	const num = Number(value);
 	return num === Math.floor(num);
@@ -75,7 +65,7 @@ const isHexColor = (str: string): boolean => {
 	const hexColorRegex = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 	return hexColorRegex.test(str);
 };
-const isBoolean = (value: any): boolean => {
+const isBoolean = (value: unknown): boolean => {
 	if (typeof value === 'boolean') return true;
 	
 	if (typeof value === 'string') {
@@ -104,7 +94,7 @@ const isJSON = (str: string): boolean => {
 		return false;
 	}
 };
-const isEmpty = (value: any): boolean => {
+const isEmpty = (value: unknown): boolean => {
 	if (value === null || value === undefined) return true;
 	if (typeof value === 'string') return value.trim().length === 0;
 	if (Array.isArray(value)) return value.length === 0;
@@ -116,7 +106,6 @@ export {
 	isEmail,
 	isURL,
 	isNumber,
-	isDate,
 	isInteger,
 	isPhoneNumber,
 	isHexColor,
