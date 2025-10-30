@@ -22,9 +22,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-interface EmojiDictionary {
-	[key: string]: string;
-}
+
+import { EmojiDictionary } from "./types";
 
 const emojiDict: EmojiDictionary = {
 	a: '🐶',
